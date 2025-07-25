@@ -25,7 +25,7 @@ function Education() {
             <p><strong>Passout</strong> 2022</p>
             <ul>
               <li>Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems</li>
-              <li>Clubs: Coding Club, Web Development Society</li>
+              <li>Clubs: Football Club</li>
             </ul>
           </div>
         </div>
@@ -36,8 +36,8 @@ function Education() {
             <p>Jawahar Navodaya Vidyalaya</p>
             <p><strong>Passout</strong> 2020</p>
             <ul>
-              <li>Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems</li>
-              <li>Clubs: Coding Club, Web Development Society</li>
+              #<li>Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems</li>
+              <li>Clubs: Football Club</li>
             </ul>
           </div>
         </div>
