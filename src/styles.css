@@ -13,6 +13,26 @@
   color: #111;
   font-weight: bold;
 }
+
+/* Project page text styling - use black instead of gray */
+.project-item,
+.project-box h2,
+.project-box p,
+.project-box ul,
+.project-box li,
+.project-box h3 {
+  color: #000 !important;
+  font-weight: bold;
+}
+
+/* Skills page text styling - use black color only for items, not titles */
+.skill-item,
+.skill-box p,
+.skill-box ul,
+.skill-box li {
+  color: #000 !important;
+  font-weight: bold;
+}
 body {
   margin: 0;
   padding: 0;
