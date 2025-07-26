@@ -1,37 +1,44 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import profilePic from '../image.jpeg';
 
 
 function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <>
+      {/* NAVIGATION */}
+      <nav className="navbar">
+        <div className="container navbar-flex">
+          {/* Website Name or Logo */}
+          <div className="navbar-left">
+            <a href="#" className="navbar-logo">
+              <h1>Vinay Yadav</h1>
+            </a>
+          </div>
+          {/* Hamburger Menu Button */}
+          <div className={`menu-btn${isMenuOpen ? ' open' : ''}`} onClick={toggleMenu}>
+            <div className="menu-btn__lines"></div>
+          </div>
+          {/* Navigation Links */}
+          <div className={`navbar-right${isMenuOpen ? ' active' : ''}`}>
+            <ul className="nav-links">
+              <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link></li>
+              <li><Link to="/skills" onClick={() => setIsMenuOpen(false)}>Skills</Link></li>
+              <li><Link to="/education" onClick={() => setIsMenuOpen(false)}>Education</Link></li>
+              <li><Link to="/experience" onClick={() => setIsMenuOpen(false)}>Experience</Link></li>
+              <li><Link to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link></li>
+              <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       {/* HERO SECTION */}
       <header className="hero">
-        <nav className="navbar">
-          <div className="container navbar-flex">
-            {/* Website Name or Logo */}
-            <div className="navbar-left">
-              <a href="#" className="navbar-logo">
-                <h1>Vinay Yadav</h1>
-              </a>
-            </div>
-            {/* Hamburger Menu Button */}
-            <div className="menu-btn">
-              <div className="menu-btn__lines"></div>
-            </div>
-            {/* Navigation Links */}
-            <div className="navbar-right">
-              <ul className="nav-links">
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/skills">Skills</Link></li>
-                <li><Link to="/education">Education</Link></li>
-                <li><Link to="/experience">Experience</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
         <div className="hero-content container">
           <h2>Aspiring Web Developer | Computer Science Student</h2>
           <p>A passionate coder on a journey to build modern, efficient web applications.</p>
